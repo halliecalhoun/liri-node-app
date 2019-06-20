@@ -31,11 +31,6 @@ function spotifyThisSong() {
     query: userQuery,
     limit: 1
     }, function (error, data) {
-    
-    // COLLECT SELECTED DATA IN AN ARRAY
-    // var spotifyArr = data.tracks.items;
-    // for (i = 0; i < spotifyArr.length; i++) {
-    // console.log(`\nBA DA BOP! That's for you...\n\nArtist: ${data.tracks.items[i].album.artists[0].name}
     if (error) {
         return console.log('Error occurred: ' + error);
         }
@@ -44,8 +39,10 @@ function spotifyThisSong() {
         // var songData = data.tracks.items[i];
         console.log("Artist: " + data.tracks.items[i].artists[0].name);
         console.log("Song: " + data.tracks.items[i].name);
-        console.log("Preview URL " + data.tracks.items[i].preview_url);
-
+        console.log("Album: " + data.tracks.items[i].album.name);
+        // data.tracks.items[i].album.name}\nSpotify link: ${data.tracks.items[i].external_urls.spotify
+        console.log("Spotify link: " + data.tracks.items[i].external_urls.spotify);
+        // preview_url
         fs.appendFile('random.txt', data.tracks.items[i].artists[0].name);
         fs.appendFile('random.txt', data.tracks.items[i].name);
         fs.appendFile('random.txt', data.tracks.items[i].preview_url);
@@ -58,7 +55,23 @@ function spotifyThisSong() {
     spotifyThisSong();
    
    
+    function doThis() {
+    // UTILIZE THE BUILT IN READFILE METHOD TO ACCESS RANDOM.TXT
+    fs.readFile("random.txt", "utf8", function (error, data) {
+    if (error) {
+    return console.log(error);
+    }
+    // CATCH DATA AND USE THE .SPLIT() METHOD TO SEPARATE OBJECTS WITHIN OUR NEW ARRAY
+    let dataArr = data.split(",");
+    // TAKE OBJECTS FROM RANDOM.TXT TO PASS AS PARAMETERS
+    userInput = dataArr[0];
+    userQuery = dataArr[1];
+    // CALL OUR FUNCTION WITH OUR NEW PARAMETERS...
+    userCommand(userInput, userQuery);
+    });
+    };
     
+    doThis();
 
 // spotify.search({ type: 'track', query: 'I want it that way' }, function(err, data) {
 //     if (err) {
