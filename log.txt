@@ -457,4 +457,58 @@ External Link: https://open.spotify.com/track/0hrBpAOgrt8RXigk83LLNE
 
 ------------------------------------------------------------
 
-undefined,undefined,undefined,undefined,undefined,undefined,
+undefined,undefined,undefined,undefined,undefined,undefined,undefined,Title: undefined
+Year: 2006
+IMDB Rating: 6.5
+Rotten Tomatoes Rating: undefined
+Country: undefined
+Language: English
+Plot: An unfortunate accident sets in motion a path of change for Nathanial Cane as he attempts to recover from substance abuse. A mentally unstable psychiatrist, DR. Henry Calhoon is tipping ...
+Actors: Ralph Cooley, Phillip Enriquez, Gregory Labenz, Amy MacDonald
+
+------------------------------------------------------------
+
+undefined,Title: undefined
+Year: 2006
+IMDB Rating: 6.5
+Rotten Tomatoes Rating: undefined
+Country: undefined
+Language: English
+Plot: An unfortunate accident sets in motion a path of change for Nathanial Cane as he attempts to recover from substance abuse. A mentally unstable psychiatrist, DR. Henry Calhoon is tipping ...
+Actors: Ralph Cooley, Phillip Enriquez, Gregory Labenz, Amy MacDonald
+
+------------------------------------------------------------
+
+undefined,Title: undefined
+Year: 2006
+IMDB Rating: 6.5
+Rotten Tomatoes Rating: undefined
+Country: undefined
+Language: English
+Plot: An unfortunate accident sets in motion a path of change for Nathanial Cane as he attempts to recover from substance abuse. A mentally unstable psychiatrist, DR. Henry Calhoon is tipping ...
+Actors: Ralph Cooley, Phillip Enriquez, Gregory Labenz, Amy MacDonald
+
+------------------------------------------------------------
+
+undefined,
+Appending this song and artist data: 
+Ace of Base
+The Sign
+https://open.spotify.com/album/5UwIyIyFzkM7wKeGtRJPgB
+The Sign (US Album) [Remastered]undefined,undefined,undefined,Title: undefined
+Year: 2000
+IMDB Rating: 7.8
+Rotten Tomatoes Rating: undefined
+Country: undefined
+Language: English
+Plot: The true story of a newly appointed African-American coach and his high school team on their first season as a racially integrated unit.
+Actors: Denzel Washington, Will Patton, Wood Harris, Ryan Hurst
+
+------------------------------------------------------------
+
+undefined,
+Appending this song and artist data: 
+Kelly Clarkson
+Because of You
+https://open.spotify.com/album/5gDAEao3VxFdbm8vS0koQq
+Breakawayundefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,
