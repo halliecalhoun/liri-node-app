@@ -9,20 +9,33 @@ var spotify = new Spotify(keys.spotify);
 var userInput = process.argv[2];
 let userQuery = process.argv.slice(3).join(" ");
 
+// concert-this
+
+// spotify-this-song
+
+// movie-this
+
+// do-what-it-says
+
 function userCommand(userInput, userQuery) {
     switch (userInput) {
         case "spotify-this":
         spotifyThisSong();
         break;
     }
+    
+    // case "do-what-it-says":
+    //     doThis();
+    //     break;
 }
 
 
 userCommand(userInput, userQuery);
+var divider = "\n------------------------------------------------------------\n\n";
+
 
 function spotifyThisSong() {
     console.log(`\n - - - - -\n\nSEARCHING FOR...`);
-    // IF USER QUERY NOT FOUND, PASS VALUE OF "ACE OF BASE"
     if (!userQuery) {
     userQuery = 'All the Small Things'
     };
@@ -37,19 +50,24 @@ function spotifyThisSong() {
         var tracksArr = data.tracks.items;
     for (var i = 0; i < tracksArr.length; i++) {
         // var songData = data.tracks.items[i];
-        console.log("Artist: " + data.tracks.items[i].artists[0].name);
-        console.log("Song: " + data.tracks.items[i].name);
-        console.log("Album: " + data.tracks.items[i].album.name);
+        var showData = [
+        console.log("Artist: " + data.tracks.items[i].artists[0].name),
+        console.log("Song: " + data.tracks.items[i].name),
+        console.log("Album: " + data.tracks.items[i].album.name),
         // data.tracks.items[i].album.name}\nSpotify link: ${data.tracks.items[i].external_urls.spotify
-        console.log("Spotify link: " + data.tracks.items[i].external_urls.spotify);
-        // preview_url
-        fs.appendFile('random.txt', data.tracks.items[i].artists[0].name);
-        fs.appendFile('random.txt', data.tracks.items[i].name);
-        fs.appendFile('random.txt', data.tracks.items[i].preview_url);
+        console.log("Spotify link: " + data.tracks.items[i].external_urls.spotify),
+        ].join("\n\n");
+
+        fs.appendFile('random.txt', showData + divider, function(error) {
+            if (error) throw error;
+        });
+        // fs.appendFile('random.txt', data.tracks.items[i].name);
+        // fs.appendFile('random.txt', data.tracks.items[i].album.name);
+        // fs.appendFile('random.txt', data.tracks.items[i].external_urls.spotify);
+        // fs.appendFile("log.txt", showData + divider, function(err) {
+        //     if (err) throw err;
+        //   });
     } 
-// } else {
-//     console.log('Error occurred: ' + error);
-// }
     }
     )};
     spotifyThisSong();
@@ -72,51 +90,3 @@ function spotifyThisSong() {
     };
     
     doThis();
-
-// spotify.search({ type: 'track', query: 'I want it that way' }, function(err, data) {
-//     if (err) {
-//       return console.log('Error occurred: ' + err);
-//     }
-   
-//   console.log(data); 
-//   });
- 
-// spotify
-//   .search({ type: 'track', query: 'All the Small Things' })
-//   .then(function(response) {
-//     console.log(response);
-//   })
-//   .catch(function(err) {
-//     console.log(err);
-//   });  
-
-
-// 
-// if (error) {
-//     return console.log('Error occurred: ' + error);
-//     }
-//     // COLLECT SELECTED DATA IN AN ARRAY
-//     var spotifyArr = data.tracks.items;
-//     for (i = 0; i < spotifyArr.length; i++) {
-//     console.log(`\nBA DA BOP! That's for you...\n\nArtist: ${data.tracks.items[i].album.artists[0].name} \nSong: ${data.tracks.items[i].name}\nAlbum: ${data.tracks.items[i].album.name}\nSpotify link: ${data.tracks.items[i].external_urls.spotify}\n\n - - - - -`)
-//     };
-//     });
-//     }
-   
-
-    // spotify.search({ type: 'track', query: 'I want it that way' }, function(err, data) {
-    //     if (err) {
-    //       return console.log('Error occurred: ' + err);
-    //     }
-       
-    //   console.log(data); 
-    //   });
-     
-    // spotify
-    //   .search({ type: 'track', query: 'All the Small Things' })
-    //   .then(function(response) {
-    //     console.log(response);
-    //   })
-    //   .catch(function(err) {
-    //     console.log(err);
-    //   });
