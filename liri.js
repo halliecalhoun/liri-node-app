@@ -1,5 +1,6 @@
 require("dotenv").config();
 
+var request = require('request');
 var keys = require("./keys.js");
 var Spotify = require('node-spotify-api');
 var fs = require("fs");
@@ -24,6 +25,10 @@ function switchCase() {
             spotifyThisSong();
             break;
 
+            case 'concert-this':
+                showConcertInfo(userQuery);
+                break;
+
             case 'do-what-it-says':
                     showSomeInfo();
                     break;
@@ -43,12 +48,34 @@ function switchCase() {
 // }
 
 
+function showConcertInfo(userQuery) {
+    var queryURL = "https://rest.bandsintown.com/artists/" + userQuery + "/events?app_id=codingbootcamp";
+    request(queryURL, function(error, response, body) {
+        // console.log(queryURL);
+        if (!error && response.statusCode === 200) {
+            var concerts = JSON.parse(body);
+            for (var i = 0; i < concerts.length; i++) {
+                console.log("--------------------EVENT INFO--------------------");
+                
+                console.log("Venue Name: " + concerts[i].venue.name);
+                console.log("Venue Location: " + concerts[i].venue.city);
+                console.log("Event Date: " + concerts[i].datetime);
+            }
+        } else {
+            console.log("Error occurred.");
+        
+        }
+    })
+};
+showConcertInfo();
+
 // userCommand(userInput, userQuery);
 var divider = "\n------------------------------------------------------------\n\n";
 // var spotifyArray = [];
 
 function spotifyThisSong() {
     console.log(`\n - - - - -\n\nSEARCHING FOR...`);
+    console.log("--------------------SPOTIFY INFO--------------------");
     if (!userQuery) {
     userQuery = 'All the Small Things'
     };
@@ -63,14 +90,15 @@ function spotifyThisSong() {
         var tracksArr = data.tracks.items;
     for (var i = 0; i < tracksArr.length; i++) {
         // var songData = data.tracks.items[i];
-        var showData = [
-        console.log("Artist: " + data.tracks.items[i].artists[0].name),
-        console.log("Song: " + data.tracks.items[i].name),
-        console.log("Album: " + data.tracks.items[i].album.name),
+        // var showData = [
+        console.log("Artist: " + data.tracks.items[i].artists[0].name);
+        console.log("Song: " + data.tracks.items[i].name);
+        console.log("Album: " + data.tracks.items[i].album.name);
         // data.tracks.items[i].album.name}\nSpotify link: ${data.tracks.items[i].external_urls.spotify
-        console.log("Spotify link: " + data.tracks.items[i].external_urls.spotify),
-        ].join("\n\n");
-        
+        console.log("Spotify link: " + data.tracks.items[i].external_urls.spotify);
+        // ].join("\n\n");
+        // console.log("Artist: " + data.tracks.items[0].artists[0].name + "\nSong name: " + data.tracks.items[0].name +
+        // "\nAlbum Name: " + data.tracks.items[0].album.name + "\nExternal Link: " + data.tracks.items[0].external_urls.spotify + "\n");
         var logTracks = "Artist: " + data.tracks.items[0].artists[0].name + "\nSong name: " + data.tracks.items[0].name +
         "\nAlbum Name: " + data.tracks.items[0].album.name + "\nExternal Link: " + data.tracks.items[0].external_urls.spotify + "\n";
         // spotifyArray.push(showData);
@@ -82,15 +110,19 @@ function spotifyThisSong() {
         //   });
     } 
     
-        fs.appendFile('random.txt', logTracks + divider, function(error) {
+        fs.appendFile('log.txt', logTracks + divider, function(error) {
             if (error) throw error;
         });
-        logResults(data);
+        // logResults(data);
+        // console.log(logTracks);
     }
     )};
-    // spotifyThisSong();
+    spotifyThisSong();
    
    
+
+
+
     function doThis() {
     // UTILIZE THE BUILT IN READFILE METHOD TO ACCESS RANDOM.TXT
     fs.readFile("random.txt", "utf8", function (error, data) {
