@@ -4,6 +4,8 @@ var request = require('request');
 var keys = require("./keys.js");
 var Spotify = require('node-spotify-api');
 var fs = require("fs");
+var moment = require('moment');
+var axios = require('axios');
 var spotify = new Spotify(keys.spotify);
 
 
@@ -50,23 +52,44 @@ function switchCase() {
 
 function showConcertInfo(userQuery) {
     var queryURL = "https://rest.bandsintown.com/artists/" + userQuery + "/events?app_id=codingbootcamp";
-    request(queryURL, function(error, response, body) {
-        // console.log(queryURL);
-        if (!error && response.statusCode === 200) {
-            var concerts = JSON.parse(body);
-            for (var i = 0; i < concerts.length; i++) {
-                console.log("--------------------EVENT INFO--------------------");
-                
-                console.log("Venue Name: " + concerts[i].venue.name);
-                console.log("Venue Location: " + concerts[i].venue.city);
-                console.log("Event Date: " + concerts[i].datetime);
-            }
-        } else {
-            console.log("Error occurred.");
+    axios.get(queryURL).then(
+        function(response) {
+                var concerts = response.data;
+                for (var i = 0; i < concerts.length; i++) {
+                    if (concerts[i].venue != undefined) {
+                    console.log("--------------------EVENT INFO--------------------");
+                    
+                    console.log("Venue Name: " + concerts[i].venue.name);
+                    console.log("Venue Location: " + concerts[i].venue.city);
+                    // var eventDateAndTime = moment(concerts[i].datetime);
+                    console.log("Event Date: " + moment(concerts[i].datetime).format("MM/DD/YYYY"));
+            } 
         
+        else {
+                console.log("No results found.");
+            }
         }
+        }
+    ).catch(function (error) {
+        console.log(error);
     })
 };
+        // console.log(queryURL);
+//         if (!error && response.statusCode === 200) {
+//             var concerts = JSON.parse(body);
+//             for (var i = 0; i < concerts.length; i++) {
+//                 console.log("--------------------EVENT INFO--------------------");
+                
+//                 console.log("Venue Name: " + concerts[i].venue.name);
+//                 console.log("Venue Location: " + concerts[i].venue.city);
+//                 console.log("Event Date: " + moment(concerts[i].datetime).format("MM/DD/YYYY"));
+//             }
+//         } else {
+//             console.log("Error occurred.");
+        
+//         }
+//     })
+// };
 showConcertInfo();
 
 // userCommand(userInput, userQuery);
@@ -75,7 +98,7 @@ var divider = "\n------------------------------------------------------------\n\
 
 function spotifyThisSong() {
     console.log(`\n - - - - -\n\nSEARCHING FOR...`);
-    console.log("--------------------SPOTIFY INFO--------------------");
+    
     if (!userQuery) {
     userQuery = 'All the Small Things'
     };
@@ -89,6 +112,7 @@ function spotifyThisSong() {
         }
         var tracksArr = data.tracks.items;
     for (var i = 0; i < tracksArr.length; i++) {
+        console.log("--------------------SPOTIFY INFO--------------------");
         // var songData = data.tracks.items[i];
         // var showData = [
         console.log("Artist: " + data.tracks.items[i].artists[0].name);
