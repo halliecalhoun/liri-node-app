@@ -215,8 +215,8 @@ function spotifyThisSong(song) {
             // for (var i = 0; i < movieData.length; i++) {
                 // console.log(movieData[i].Title);
                 if (movie === ""){
-                    movie = "Mr. Nobody";
-                    movie.Data.Title === "Mr. Nobody";
+                    movie = Mr. Nobody;
+                    console.log("Movie Title: Mr. Nobody");
                 } else {
                 // if (movieData.Title != undefined) {
                 console.log("--------------------MOVIE INFO--------------------");
@@ -262,7 +262,7 @@ function spotifyThisSong(song) {
         })
       
     };
-movieThis();
+// movieThis();
 
 
     // function doThis() {
@@ -281,17 +281,17 @@ movieThis();
     // });
     // };
     
-    function showSomeInfo(){
-        fs.readFile('random.txt', 'utf8', function(error, data){
-            if (error){ 
-                return console.log(err);
-            }
-            var dataArr = data.split(',');
-            userInput = dataArr[0];
-            userQuery = dataArr[1];
-            // switchCase(dataArr[0], dataArr[1]);
-        });
-    };
+    // function showSomeInfo(){
+    //     fs.readFile('random.txt', 'utf8', function(error, data){
+    //         if (error){ 
+    //             return console.log(err);
+    //         }
+    //         var dataArr = data.split(',');
+    //         userInput = dataArr[0];
+    //         userQuery = dataArr[1];
+    //         // switchCase(dataArr[0], dataArr[1]);
+    //     });
+    // };
     function showSomeInfo() {
             fs.readFile("random.txt", "utf8", function(error, data) {
                 var dataArr = data.split(",");
