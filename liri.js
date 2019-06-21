@@ -16,23 +16,36 @@ let userQuery = process.argv.slice(3).join(" ");
 // movie-this
 
 // do-what-it-says
+// switchCase(userInput, inputParameter);
 
-function userCommand(userInput, userQuery) {
+function switchCase() {
     switch (userInput) {
-        case "spotify-this":
-        spotifyThisSong();
-        break;
+        case 'spotify-this-song':
+            spotifyThisSong();
+            break;
+
+            case 'do-what-it-says':
+                    showSomeInfo();
+                    break;
     }
+};
+
+// function userCommands(userInput, userQuery) {
+//     switch (userInput) {
+//         case "spotify-this":
+//         spotifyThisSong();
+//         break;
+//     }
     
     // case "do-what-it-says":
     //     doThis();
     //     break;
-}
+// }
 
 
-userCommand(userInput, userQuery);
+// userCommand(userInput, userQuery);
 var divider = "\n------------------------------------------------------------\n\n";
-
+// var spotifyArray = [];
 
 function spotifyThisSong() {
     console.log(`\n - - - - -\n\nSEARCHING FOR...`);
@@ -57,10 +70,10 @@ function spotifyThisSong() {
         // data.tracks.items[i].album.name}\nSpotify link: ${data.tracks.items[i].external_urls.spotify
         console.log("Spotify link: " + data.tracks.items[i].external_urls.spotify),
         ].join("\n\n");
-
-        fs.appendFile('random.txt', showData + divider, function(error) {
-            if (error) throw error;
-        });
+        
+        var logTracks = "Artist: " + data.tracks.items[0].artists[0].name + "\nSong name: " + data.tracks.items[0].name +
+        "\nAlbum Name: " + data.tracks.items[0].album.name + "\nExternal Link: " + data.tracks.items[0].external_urls.spotify + "\n";
+        // spotifyArray.push(showData);
         // fs.appendFile('random.txt', data.tracks.items[i].name);
         // fs.appendFile('random.txt', data.tracks.items[i].album.name);
         // fs.appendFile('random.txt', data.tracks.items[i].external_urls.spotify);
@@ -68,9 +81,14 @@ function spotifyThisSong() {
         //     if (err) throw err;
         //   });
     } 
+    
+        fs.appendFile('random.txt', logTracks + divider, function(error) {
+            if (error) throw error;
+        });
+        logResults(data);
     }
     )};
-    spotifyThisSong();
+    // spotifyThisSong();
    
    
     function doThis() {
@@ -85,8 +103,19 @@ function spotifyThisSong() {
     userInput = dataArr[0];
     userQuery = dataArr[1];
     // CALL OUR FUNCTION WITH OUR NEW PARAMETERS...
-    userCommand(userInput, userQuery);
+    // userCommand(userInput, userQuery);
     });
     };
     
-    doThis();
+    function showSomeInfo(){
+        fs.readFile('random.txt', 'utf8', function(error, data){
+            if (error){ 
+                return console.log(err);
+            }
+            var dataArr = data.split(',');
+            switchCase(dataArr[0], dataArr[1]);
+        });
+    }
+
+
+    switchCase();
