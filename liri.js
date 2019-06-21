@@ -2,10 +2,11 @@ require("dotenv").config();
 var request = require('request');
 var keys = require("./keys.js");
 var Spotify = require('node-spotify-api');
+
 // var fs = require("fs");
 var moment = require('moment');
 var axios = require('axios');
-var spotify = new Spotify(keys.spotify);
+
 
 var fs = require("fs");
 fs.appendFile('log.txt', userInput + ",", function (err) {
@@ -22,29 +23,30 @@ var userQuery = process.argv[3];
 // movie-this
 
 // do-what-it-says 
-switchCase();
 
-function switchCase() {
+
+function switchCase(userInput, userQuery) {
     switch (userInput) {
-        case 'spotify-this-song':
-            spotifyThisSong(userQuery);
-            break;
 
             case 'concert-this':
-                showConcertInfo(userQuery);
+                showConcertInfo();
                 break;
 
+                case 'spotify-this-song':
+            spotifyThisSong();
+            break;
+
                 case 'movie-this':
-                    movieThis(userQuery);
+                    movieThis();
                     break;
 
             case 'do-what-it-says':
                     showSomeInfo();
                     break;
                     
-    };
-};
-
+    }
+}
+switchCase(userInput, userQuery);
 // function userCommands(userInput, userQuery) {
 //     switch (userInput) {
 //         case "spotify-this":
@@ -151,53 +153,93 @@ function showConcertInfo(artist) {
 // userCommand(userInput, userQuery);
 var divider = "\n------------------------------------------------------------\n\n";
 // var spotifyArray = [];
-
-function spotifyThisSong(song) {
+// function spotifyThisSong(song) {
+//     console.log(`\n - - - - -\n\nSEARCHING FOR...`);
+// spotify
+//   .search({ type: 'track', query: 'song' })
+//   .then(function(response) {
+//     console.log(response);
+//   })
+//   .catch(function(err) {
+//     console.log(err);
+//   });
+function spotifyThisSong() {
     console.log(`\n - - - - -\n\nSEARCHING FOR...`);
-    
-    // if (!userQuery) {
-    // userQuery = 'All the Small Things'
-    // };
-    spotify.search({
-    type: 'track',
-    query: song,
-    limit: 1
-    }, function (error, data) {
-    if (error) {
-        return console.log('Error occurred: ' + error);
+    // var isInputNull = userQuery === "" ? userQuery = "The Sign Ace of Base" : userQuery = userQuery;
+    if (!userQuery) {
+        userQuery = "The Sign Ace of Base";
+    }
+    var spotify = new Spotify(keys.spotify);
+
+	spotify.search({
+		type: "track",
+		query: userQuery,
+		limit: 1
+	}, function(err, data) {
+		if (err) {
+			return console.log(err);
+		} else {
+			console.log("Artist: " + data.tracks.items[0].album.artists[0].name); // artist's name
+			console.log("Song name: " + data.tracks.items[0].name) // song name
+			console.log("External url: " + data.tracks.items[0].album.external_urls.spotify) // external link
+			console.log("Album: " + data.tracks.items[0].album.name) // album name
         }
-        var tracksArr = data.tracks.items;
-    for (var i = 0; i < tracksArr.length; i++) {
-        console.log("--------------------SPOTIFY INFO--------------------");
+        // fs.appendFile("log.txt", "\nAppending this song and artist data: " + 
+		// 	"\n" + data.tracks.items[0].album.artists[0].name + 
+		// 	"\n" + data.tracks.items[0].name + 
+		// 	"\n" + data.tracks.items[0].album.external_urls.spotify + 
+		// 	"\n" + data.tracks.items[0].album.name, function(err) {
+		// 		if (err) {
+		// 			console.log(err);
+		// 		}
+		// 	})
+	})
+}
+// spotify.search({ type: 'track', query: 'song' }, function(err, data) {
+//     if (err) {
+//       return console.log('Error occurred: ' + err);
+//     }
+   
+//   console.log(data); 
+//   })
+// };
+
+// function spotifyThisSong(song) {
+//     console.log(`\n - - - - -\n\nSEARCHING FOR...`);
+//     spotify.search({
+//     type: 'track',
+//     query: song,
+//     limit: 1
+//     }, function (error, data) {
+//         console.log();
+//     if (error) {
+//         return console.log('Error occurred: ' + error);
+//         };
+//         if (!song) {
+//             song = "The Sign Ace of Base";
+//             } else {
+//         var tracksArr = data.tracks.items;
+//         for (var i = 0; i < tracksArr.length; i++) {
+//         if (!error) {
+//         console.log("--------------------SPOTIFY INFO--------------------");
         // var songData = data.tracks.items[i];
         // var showData = [
-        console.log("Artist: " + data.tracks.items[i].artists[0].name);
-        console.log("Song: " + data.tracks.items[i].name);
-        console.log("Album: " + data.tracks.items[i].album.name);
+        // console.log("Artist: " + tracksArr[i].artists[i].name);
+        // console.log("Song: " + tracksArr[i].name);
+        // console.log("Album: " + data.tracks.items[i].album.name);
         // data.tracks.items[i].album.name}\nSpotify link: ${data.tracks.items[i].external_urls.spotify
-        console.log("Spotify link: " + data.tracks.items[i].external_urls.spotify);
-        // ].join("\n\n");
-        // console.log("Artist: " + data.tracks.items[0].artists[0].name + "\nSong name: " + data.tracks.items[0].name +
-        // "\nAlbum Name: " + data.tracks.items[0].album.name + "\nExternal Link: " + data.tracks.items[0].external_urls.spotify + "\n");
-        var logTracks = "Artist: " + data.tracks.items[0].artists[0].name + "\nSong name: " + data.tracks.items[0].name +
-        "\nAlbum Name: " + data.tracks.items[0].album.name + "\nExternal Link: " + data.tracks.items[0].external_urls.spotify + "\n";
-        // spotifyArray.push(showData);
-        // fs.appendFile('random.txt', data.tracks.items[i].name);
-        // fs.appendFile('random.txt', data.tracks.items[i].album.name);
-        // fs.appendFile('random.txt', data.tracks.items[i].external_urls.spotify);
-        // fs.appendFile("log.txt", showData + divider, function(err) {
-        //     if (err) throw err;
-        //   });
-    } 
+    //     console.log("Spotify link: " + data.tracks.items[i].external_urls.spotify);
+    //     var logTracks = "Artist: " + data.tracks.items[i].artists[0].name + "\nSong name: " + data.tracks.items[i].name +
+    //     "\nAlbum Name: " + data.tracks.items[i].album.name + "\nExternal Link: " + data.tracks.items[i].external_urls.spotify + "\n";
+    //     fs.appendFile('log.txt', logTracks + divider, function(error) {
+    //         if (error) throw error;
+    //     });
+    //     }
+    //     }
+    // }
+    // }
+    // )};
     
-        fs.appendFile('log.txt', logTracks + divider, function(error) {
-            if (error) throw error;
-            // writeToLog(logTracks);
-        });
-        // logResults(data);
-        // console.log(logTracks);
-    }
-    )};
 
     // spotifyThisSong();
    
@@ -215,7 +257,7 @@ function spotifyThisSong(song) {
             // for (var i = 0; i < movieData.length; i++) {
                 // console.log(movieData[i].Title);
                 if (movie === ""){
-                    movie = Mr. Nobody;
+                    movie = "Mr. Nobody";
                     console.log("Movie Title: Mr. Nobody");
                 } else {
                 // if (movieData.Title != undefined) {
@@ -281,17 +323,17 @@ function spotifyThisSong(song) {
     // });
     // };
     
-    // function showSomeInfo(){
-    //     fs.readFile('random.txt', 'utf8', function(error, data){
-    //         if (error){ 
-    //             return console.log(err);
-    //         }
-    //         var dataArr = data.split(',');
-    //         userInput = dataArr[0];
-    //         userQuery = dataArr[1];
-    //         // switchCase(dataArr[0], dataArr[1]);
-    //     });
-    // };
+    function showInfo(){
+        fs.readFile('random.txt', 'utf8', function(error, data){
+            if (error){ 
+                return console.log(err);
+            }
+            var dataArr = data.split(',');
+            userInput = dataArr[0];
+            userQuery = dataArr[1];
+            // switchCase(dataArr[0], dataArr[1]);
+        });
+    };
     function showSomeInfo() {
             fs.readFile("random.txt", "utf8", function(error, data) {
                 var dataArr = data.split(",");
@@ -303,4 +345,4 @@ function spotifyThisSong(song) {
             });
         };
 
-    // switchCase();
+    switchCase();
