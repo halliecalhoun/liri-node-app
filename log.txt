@@ -511,4 +511,254 @@ Appending this song and artist data:
 Kelly Clarkson
 Because of You
 https://open.spotify.com/album/5gDAEao3VxFdbm8vS0koQq
-Breakawayundefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,
+Breakawayundefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,
+Appending this song and artist data: 
+Adele
+When We Were Young
+https://open.spotify.com/album/0K4pIOOsfJ9lK8OjrZfXzd
+25undefined,undefined,undefined,Title: undefined
+Year: 1986
+IMDB Rating: 6.9
+Rotten Tomatoes Rating: undefined
+Country: undefined
+Language: English
+Plot: As students at the United States Navy's elite fighter weapons school compete to be best in the class, one daring young pilot learns a few things from a civilian instructor that are not taught in the classroom.
+Actors: Tom Cruise, Kelly McGillis, Val Kilmer, Anthony Edwards
+
+------------------------------------------------------------
+
+undefined,undefined,undefined,undefined,undefined,undefined
+------------------------------------------------------------
+
+undefined,Venue Name: blink-182 & Lil Wayne Tour 2019
+Venue Location: Indianapolis
+Event Date: 07/03/2019
+
+------------------------------------------------------------
+
+undefined,
+Appending this song and artist data: 
+Drake
+Money In The Grave (Drake ft. Rick Ross)
+https://open.spotify.com/album/00HZxSA1sOS9T3nA950sg4
+The Best In The World Packundefined,undefined,
+Appending this song and artist data: 
+Drake
+Money In The Grave (Drake ft. Rick Ross)
+https://open.spotify.com/album/00HZxSA1sOS9T3nA950sg4
+The Best In The World Packundefined,
+Appending this song and artist data: 
+Drake
+Money In The Grave (Drake ft. Rick Ross)
+https://open.spotify.com/album/00HZxSA1sOS9T3nA950sg4
+The Best In The World Packundefined,
+Appending this song and artist data: 
+Drake
+Money In The Grave (Drake ft. Rick Ross)
+https://open.spotify.com/album/00HZxSA1sOS9T3nA950sg4
+The Best In The World Packundefined,
+Appending this song and artist data: 
+Travis Scott
+SICKO MODE
+https://open.spotify.com/album/41GuZcammIkupMPKH2OJ6I
+ASTROWORLDundefined,
+Appending this song and artist data: 
+Drake
+Money In The Grave (Drake ft. Rick Ross)
+https://open.spotify.com/album/00HZxSA1sOS9T3nA950sg4
+The Best In The World Packundefined,
+Appending this song and artist data: 
+Drake
+One Dance
+https://open.spotify.com/album/40GMAhriYJRO1rsY4YdrZb
+Viewsundefined,
+Appending this song and artist data: 
+Drake
+Controlla
+https://open.spotify.com/album/40GMAhriYJRO1rsY4YdrZb
+Viewsundefined,
+Appending this song and artist data: 
+Drake
+Money In The Grave (Drake ft. Rick Ross)
+https://open.spotify.com/album/00HZxSA1sOS9T3nA950sg4
+The Best In The World Packundefined,
+Appending this song and artist data: 
+Ace of Base
+The Sign
+https://open.spotify.com/album/5UwIyIyFzkM7wKeGtRJPgB
+The Sign (US Album) [Remastered]undefined,Title: undefined
+Year: 2004
+IMDB Rating: 6.8
+Rotten Tomatoes Rating: undefined
+Country: undefined
+Language: English, Hawaiian, Mandarin, None
+Plot: Henry Roth is a man afraid of commitment up until he meets the beautiful Lucy. They hit it off and Henry think he's finally found the girl of his dreams, until he discovers she has short-term memory loss and forgets him the next day.
+Actors: Adam Sandler, Drew Barrymore, Rob Schneider, Sean Astin
+
+------------------------------------------------------------
+
+undefined,undefined,undefined,undefined,undefined,Title: undefined
+Year: 2009
+IMDB Rating: 7.8
+Rotten Tomatoes Rating: undefined
+Country: undefined
+Language: English, Mohawk
+Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+
+------------------------------------------------------------
+
+undefined,Title: undefined
+Year: 2009
+IMDB Rating: 7.8
+Rotten Tomatoes Rating: undefined
+Country: undefined
+Language: English, Mohawk
+Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+
+------------------------------------------------------------
+
+undefined,
+Appending this song and artist data: 
+Drake
+Money In The Grave (Drake ft. Rick Ross)
+https://open.spotify.com/album/00HZxSA1sOS9T3nA950sg4
+The Best In The World Packundefined,Title: undefined
+Year: 2007
+IMDB Rating: 7.6
+Rotten Tomatoes Rating: undefined
+Country: undefined
+Language: English
+Plot: Two co-dependent high school seniors are forced to deal with separation anxiety after their plan to stage a booze-soaked party goes awry.
+Actors: Jonah Hill, Michael Cera, Christopher Mintz-Plasse, Bill Hader
+
+------------------------------------------------------------
+
+undefined,Title: undefined
+Year: 2009
+IMDB Rating: 7.8
+Rotten Tomatoes Rating: undefined
+Country: undefined
+Language: English, Mohawk
+Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+
+------------------------------------------------------------
+
+undefined,
+Appending this song and artist data: 
+Ace of Base
+The Sign
+https://open.spotify.com/album/5UwIyIyFzkM7wKeGtRJPgB
+The Sign (US Album) [Remastered]undefined,Venue Name: Sept 13-15 | KAABOO Del Mar
+Venue Location: Del Mar
+Event Date: 09/13/2019
+
+------------------------------------------------------------
+
+undefined,Venue Name: Sept 13-15 | KAABOO Del Mar
+Venue Location: Del Mar
+Event Date: 09/13/2019
+
+------------------------------------------------------------
+
+undefined,Venue Name: Sept 13-15 | KAABOO Del Mar
+Venue Location: Del Mar
+Event Date: 09/13/2019
+
+------------------------------------------------------------
+
+undefined,Venue Name: Sept 13-15 | KAABOO Del Mar
+Venue Location: Del Mar
+Event Date: 09/13/2019
+
+------------------------------------------------------------
+
+undefined,
+Appending this song and artist data: 
+Drake
+Money In The Grave (Drake ft. Rick Ross)
+https://open.spotify.com/album/00HZxSA1sOS9T3nA950sg4
+The Best In The World Packundefined,
+Appending this song and artist data: 
+Drake
+Money In The Grave (Drake ft. Rick Ross)
+https://open.spotify.com/album/00HZxSA1sOS9T3nA950sg4
+The Best In The World Packundefined,
+Appending this song and artist data: 
+Ace of Base
+The Sign
+https://open.spotify.com/album/5UwIyIyFzkM7wKeGtRJPgB
+The Sign (US Album) [Remastered]undefined,Title: undefined
+Year: 2009
+IMDB Rating: 7.8
+Rotten Tomatoes Rating: undefined
+Country: undefined
+Language: English, Mohawk
+Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+
+------------------------------------------------------------
+
+undefined,Title: undefined
+Year: 2009
+IMDB Rating: 7.8
+Rotten Tomatoes Rating: undefined
+Country: undefined
+Language: English, Mohawk
+Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+
+------------------------------------------------------------
+
+undefined,Title: undefined
+Year: 2009
+IMDB Rating: 7.8
+Rotten Tomatoes Rating: undefined
+Country: undefined
+Language: English, Mohawk
+Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+
+------------------------------------------------------------
+
+undefined,Title: undefined
+Year: 2009
+IMDB Rating: 7.8
+Rotten Tomatoes Rating: undefined
+Country: undefined
+Language: English, Mohawk
+Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+
+------------------------------------------------------------
+
+undefined,Title: undefined
+Year: 2010
+IMDB Rating: 8.8
+Rotten Tomatoes Rating: undefined
+Country: undefined
+Language: English, Japanese, French
+Plot: A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.
+Actors: Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page, Tom Hardy
+
+------------------------------------------------------------
+
+undefined,undefined,undefined,undefined,undefined,undefined,undefined,
+Appending this song and artist data: 
+Backstreet Boys
+I Want It That Way
+https://open.spotify.com/album/1NslKOZobWxINFaFkLol3r
+The Hits--Chapter Oneundefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,
+Appending this song and artist data: 
+Kendrick Lamar
+Money Trees
+https://open.spotify.com/album/6PBZN8cbwkqm1ERj2BGXJ1
+good kid, m.A.A.d city
+undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,Venue Name: Sept 13-15 | KAABOO Del Mar
+Venue Location: Del Mar
+Event Date: 09/13/2019
+
+------------------------------------------------------------
+
